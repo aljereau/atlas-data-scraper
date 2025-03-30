@@ -1,0 +1,51 @@
+{
+    "websites": [
+        {
+            "name": "funda",
+            "url": "https://www.funda.nl",
+            "type": "dynamic",
+            "selectors": {
+                "price": ".object-header__price",
+                "address": ".object-header__title",
+                "postal_code": ".object-header__subtitle",
+                "energy_label": ".energy-label",
+                "year_built": "Bouwjaar",
+                "plot_size": "Perceeloppervlakte",
+                "living_area": "Woonoppervlakte"
+            },
+            "headers": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.5",
+                "Connection": "keep-alive",
+                "Upgrade-Insecure-Requests": "1"
+            }
+        }
+    ],
+    "scraping": {
+        "min_delay": 3.0,
+        "max_delay": 7.0,
+        "error_delay": 10.0,
+        "max_retries": 3
+    },
+    "data_structure": {
+        "required_fields": [
+            "property_id",
+            "price",
+            "address",
+            "postal_code",
+            "city",
+            "size",
+            "rooms",
+            "energy_label",
+            "year_built"
+        ],
+        "mock_fields": [
+            "neighborhood_crime_rate",
+            "school_rating",
+            "future_development_potential",
+            "market_trend_score",
+            "infrastructure_score",
+            "investment_rating"
+        ]
+    }
+} 
